@@ -17,10 +17,10 @@ Jeweler::Tasks.new do |gem|
   gem.name = "exception-ketchup"
   gem.homepage = "http://github.com/datenspiel/exception-ketchup"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Rails exception handling happens with ActionController extension and Mongoid support.}
+  gem.description = %Q{Rails exception handling happens with ActionController extension and Mongoid support.}
   gem.email = "dsci@code79.net"
-  gem.authors = ["Daniel Schmidt"]
+  gem.authors = ["Daniel Schmidt", "Lars Müller"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
