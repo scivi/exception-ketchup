@@ -109,6 +109,7 @@ module Ketchup
 end
 
 # require extensions.
+require_relative "util/support"
 require_relative "rails/error"
 require_relative "rails/controller"
 require_relative "rails/mailer.rb"

@@ -4,8 +4,7 @@ module Ketchup
 
     class Error
       include Mongoid::Document
-
-      store_in :errors
+      include Ketchup::Exception::SupportedMongos
 
       field :kind,        :type => String
       field :message,     :type => String

@@ -24,6 +24,10 @@ describe Ketchup::Exception::Error do
 
     its(:kind){should eq "StandardError"}
 
+    it "collection name matches configuration" do
+      subject.collection.name.to_sym.should eq Ketchup::Exception.exception_collection
+    end
+
   end
 
 end

@@ -30,6 +30,11 @@ FakeTestController = Class.new(ApplicationController) do
 
 end
 
+Rails.application.routes.draw do
+  match '/show_author/:id' => "fake_test#show"
+end
+
+
 describe "exception handling within controller", :type => :controller do
   let(:recipients){ %W(ds@test.com da@test.com) }
 
@@ -42,10 +47,17 @@ describe "exception handling within controller", :type => :controller do
       config.environment = :test
     end
 
-    Author = Class.new do
-      include Mongoid::Document
+    mongo_major = Mongoid::VERSION.split(".").first
 
-      store_in :authors
+    unless defined?(Author)
+      Author = Class.new do
+        include Mongoid::Document
+        if mongo_major.eql?("3")
+          store_in :collection => :authors
+        else
+          store_in :authors
+        end
+      end
     end
 
   end

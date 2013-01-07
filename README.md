@@ -1,6 +1,8 @@
 ## Ketchup exception handling
 
-Rails exception handling happens with ActionController extension and Mongoid support.
+Rails exception handling happens with ActionController extension and Mongoid support. 
+
+With version 0.2 comes Mongoid 3 support.
 
 ## Install & Configuration
 
@@ -95,7 +97,7 @@ If <code>config.persist</code> is set to false, <code>:remember</code> will be i
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
-== Copyright
+## Copyright
 
 Copyright (c) 2012 Daniel Schmidt. See LICENSE.txt for
 further details.

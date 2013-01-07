@@ -18,7 +18,7 @@ describe Ketchup::Exception do
     context "for environment" do
 
       it "is production" do
-        subject.environment.should eq :production
+        subject.environment.should eq [:production]
       end
 
     end

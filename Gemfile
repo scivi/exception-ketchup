@@ -4,7 +4,7 @@ source "http://rubygems.org"
 #   gem "activesupport", ">= 2.3.5"
 
 gem 'rails'
-gem 'mongoid'
+gem "mongoid"
 gem 'bson_ext'
 
 # Add dependencies to develop your gem here.
@@ -12,7 +12,7 @@ gem 'bson_ext'
 group :development do
   gem "rspec", "~> 2.8.0"
   gem 'rspec-rails'
-  gem 'mongoid-rspec'
+  #gem 'mongoid-rspec'
   gem 'database_cleaner'
   gem "rdoc", "~> 3.12"
   gem "bundler"
