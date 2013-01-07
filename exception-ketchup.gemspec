@@ -5,17 +5,16 @@
 
 Gem::Specification.new do |s|
   s.name = "exception-ketchup"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Daniel Schmidt"]
-  s.date = "2013-01-04"
-  s.description = "TODO: longer description of your gem"
+  s.authors = ["Daniel Schmidt", "Lars M\u{fc}ller"]
+  s.date = "2013-01-07"
+  s.description = "Rails exception handling happens with ActionController extension and Mongoid support."
   s.email = "dsci@code79.net"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.md",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
@@ -24,14 +23,15 @@ Gem::Specification.new do |s|
     "Gemfile.lock",
     "LICENSE.txt",
     "README.md",
-    "README.rdoc",
     "Rakefile",
     "VERSION",
+    "exception-ketchup.gemspec",
     "lib/exception-ketchup.rb",
     "lib/rails/controller.rb",
     "lib/rails/error.rb",
     "lib/rails/mailer.rb",
     "lib/util/handler.rb",
+    "lib/util/support.rb",
     "spec/dummy/README.rdoc",
     "spec/dummy/Rakefile",
     "spec/dummy/app/assets/javascripts/application.js",
@@ -75,7 +75,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
-  s.summary = "TODO: one-line summary of your gem"
+  s.summary = "Rails exception handling happens with ActionController extension and Mongoid support."
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
@@ -86,7 +86,6 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<bson_ext>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_development_dependency(%q<rspec-rails>, [">= 0"])
-      s.add_development_dependency(%q<mongoid-rspec>, [">= 0"])
       s.add_development_dependency(%q<database_cleaner>, [">= 0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, [">= 0"])
@@ -98,7 +97,6 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<bson_ext>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_dependency(%q<rspec-rails>, [">= 0"])
-      s.add_dependency(%q<mongoid-rspec>, [">= 0"])
       s.add_dependency(%q<database_cleaner>, [">= 0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, [">= 0"])
@@ -111,7 +109,6 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<bson_ext>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.8.0"])
     s.add_dependency(%q<rspec-rails>, [">= 0"])
-    s.add_dependency(%q<mongoid-rspec>, [">= 0"])
     s.add_dependency(%q<database_cleaner>, [">= 0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, [">= 0"])
