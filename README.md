@@ -1,4 +1,4 @@
-## Ketchup exception handling ![Still maintained](http://stillmaintained.com/dsci/Jason.png) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/datenspiel/exception-ketchup)
+## Ketchup exception handling [![](http://stillmaintained.com/datenspiel/exception-ketchup.png)](http://stillmaintained.com/datenspiel/exception-ketchup) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/datenspiel/exception-ketchup)
 
 Rails exception handling happens with ActionController extension and Mongoid support. 
 
