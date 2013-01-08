@@ -82,17 +82,11 @@ module Ketchup
           conf = self.class.rescue_errors.find { |error_conf| error_conf[:error] == err.class }
           conf = default_conf.merge(conf || {})
           # save to database
-          if Ketchup::Exception.persist
-            Ketchup::Handler.action(:database, :exception => err) if conf[:remember]
-          end
+          handle_persistence(conf[:remember], err)
           # send an email
-          if Ketchup::Exception.deliver_mail
-            Ketchup::Handler.action(:mail, {:exception => err, :host => request.host_with_port}) if conf[:notify]
-          end
+          handle_mail(conf[:notify], err)
           # log error
-          if conf[:log]
-            Ketchup::Exception.log_error.call(err)
-          end 
+          handle_logging(conf[:log], err)
           # Run error handler
           if conf[:with].is_a? Proc
             conf[:with].call(err)
@@ -102,6 +96,24 @@ module Ketchup
         else
           raise err
         end
+      end
+
+      private 
+
+      def handle_mail(mail_flag, err)
+        if Ketchup::Exception.deliver_mail
+          Ketchup::Handler.action(:mail, {:exception => err, :host => request.host_with_port}) if mail_flag
+        end
+      end
+
+      def handle_persistence(persist_flag, err)
+        if Ketchup::Exception.persist
+          Ketchup::Handler.action(:database, :exception => err) if persist_flag
+        end
+      end
+
+      def handle_logging(log_flag, err)
+        Ketchup::Exception.log_error.call(err) if log_flag 
       end
 
     end
