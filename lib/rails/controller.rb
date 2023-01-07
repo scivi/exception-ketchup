@@ -51,7 +51,7 @@ module Ketchup
         # controller extension method to #around_filter.
         def ketchup_exceptions(*args)
           yield(self) if block_given?
-          around_filter :ketchup
+          around_action :ketchup
         end
       end
 
